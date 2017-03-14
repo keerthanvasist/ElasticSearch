@@ -1,0 +1,14 @@
+This system is designed to index documents into ElasticSearch. The objective of the system is to be able to index documents from different
+data sources (csv file, tsv file, mongoDB, mysql etc). For now, the system will only take one source (csv file). However, it can be extended
+to other data sources by incrementally adding classes that extend the Input abstract class.
+
+The design of the project is simple. We just have one Input abstract class, which can be extended by different types of input child classes
+like CSVInput, TSVInput etc. The input object has methods that read input from file, convert it to a json/map and another method to index
+input. 
+
+ The program reads in the required config parameters from the property file "config.properties". Logs are written with the help of log4j2 API. 
+ The logs can be configured in the log4j2.xml file. The dependencies are managed in the pom.xml using Maven as build tool. 
+ 
+ 
+
+ 
